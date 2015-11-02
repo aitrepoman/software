@@ -23,12 +23,13 @@ var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 //What does it do?
 
 // Use a remote logging console
-var consolere = require('console-remote-client').connect('console.re','80','aitrepoman_first_server');
+var consolere = require('console-remote-client').connect('console.re','80','a00198515_first_server');
 
 //We need a function which handles requests and send response
 function handleRequest(request, response){
     response.end('Yes! It Works!! Path Hit: ' + server_ip_address + ":" + server_port + "/" + request.url);
     console.re.log("My server ip address is: " + server_ip_address);
+    console.re.log("My server port is: " + server_port);
 }
 //What is a request?
 //What is a response?
